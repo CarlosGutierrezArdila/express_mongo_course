@@ -1,2 +1,16 @@
-exports.perimeter = (x, y) => (2 * (x + y)) //exporting simple properties
-exports.area = (x, y) => x * y
+module.exports = (x, y, callback) => {
+    if (x <= 0 || y <= 0) {
+        setTimeout(() =>
+            callback(new Error("values must be grater than 0"), null)
+            , 2000) //simulate delay
+
+    } else {
+        setTimeout(() =>
+            callback(null, {
+                perimeter : () => (2 * (x + y)), //returning object
+                area : () => x * y
+            }
+            )
+            , 2000)
+    }
+}

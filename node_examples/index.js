@@ -1,12 +1,14 @@
 var rect = require('./rectangle') //importing the module
 function solveRect(a, b) {
     console.info(`solving ${a} ${b}`)
-    if (a < 0 || b < 0) {
-        console.error("values must be grater than 0")
-    } else {
-        console.info(`area: ${rect.area(a, b)} _ perimeter: ${rect.perimeter(a, b)}`)
+    rect(a,b, (err, rectangle) => {
+        if (err) {
+            console.error(`ERROR: ${err.message}`)
+        } else{
+            console.info(`area: ${rectangle.area()} _ perimeter: ${rectangle.perimeter()}`)
+        }
+    })
 
-    }
 
 }
 solveRect(3,4)
