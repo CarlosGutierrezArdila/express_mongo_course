@@ -31,6 +31,12 @@ router.route('/')
 .get(...)
 ....
 ```
+# Express Generator
+- scaffolding tool to generate an express app skeleton
+- npm install express-generator -g
+- express '<'App Name'>'
+- move to folder and mpm install
+
 
 
 
