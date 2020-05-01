@@ -36,6 +36,31 @@ router.route('/')
 - npm install express-generator -g
 - express '<'App Name'>'
 - move to folder and mpm install
+# Intro to MongoDB
+- Document based
+- BSON: JSON wyth adicional types as UTC date, raw binary and ObjectId
+- to run a local instance: create a folder, ex mongodb with data subfolder inside, then:
+```shell
+mongod --dbpath=data --bind_ip 127.0.0.1
+```
+- to access the bd via terminal and interact with basic commands just type
+```shell
+    mongo # start
+    db  # show current db
+    use conFusion # change db
+    db
+    db.help() 
+    db.dishes.insert({ name: "Uthappizza", description: "Test" }); # insert to a new or existen collection
+    db.dishes.find().pretty();# print objects in collection
+    var id = new ObjectId();
+    id.getTimestamp(); # get iSO date
+    exit
+```
+# Node and MongoDB
+- Node mongo driver: high level api to interact with db server
+- npm install mongodb --save
+- supports callback and promise based interactions
+
 
 
 
