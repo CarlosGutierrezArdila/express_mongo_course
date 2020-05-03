@@ -14,13 +14,32 @@ connect.then((db) => {
         .then((dish) => {
             console.info(dish)
 
-            return Dishes.find({}).exec()
+            return Dishes.findByIdAndUpdate(dish._id, {
+                $set: { description: 'Updated test' },
+            }, {
+                new: true // this flag means the dish will be returned when updated
+            }
+            ).exec()
         }
         )
-        .then((dishes) => {
-            console.info(dishes)
+        .then((dish) => {
+            console.info(dish)
+
+            dish.comments.push({
+                rating : 5,
+                comment : 'I\'m getting a sinking felling!',
+                author : 'Max777'
+            })
+            return dish.save()
+        })
+        .then((dish) => {
+            console.info(dish)
+            
             return Dishes.remove({})
         })
+
+            
+        
         .then(() => {
             return mongoose.connection.close()
         })
