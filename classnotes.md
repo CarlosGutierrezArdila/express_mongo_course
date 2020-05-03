@@ -60,6 +60,10 @@ mongod --dbpath=data --bind_ip 127.0.0.1
 - Node mongo driver: high level api to interact with db server
 - npm install mongodb --save
 - supports callback and promise based interactions
+# Mongoose ODM
+- Defines and enforces an structure over documents, they don't have any structure in mongo
+- the schema defines the fields of the document
+- schemas can be nested
 
 
 
