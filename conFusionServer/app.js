@@ -3,12 +3,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const dishRouter = require('./routes/dishRouter');
 const leaderRouter = require('./routes/leaderRouter');
 const promotionRouter = require('./routes/promotionRouter');
+
+const Dishes = require('./models/dishes')
+
+const url = 'mongodb://localhost:27017/conFusion'
+
+const connect = mongoose.connect(url)
+
+connect.then((db) => {
+  console.info('Connected to DB')
+})
+  .catch((err) => {
+    console.info(err)
+  })
 
 var app = express();
 
@@ -32,12 +46,12 @@ app.use('/promotions', promotionRouter)
 app.use('/leaders', leaderRouter)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
