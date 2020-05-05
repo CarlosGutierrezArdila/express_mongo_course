@@ -64,6 +64,9 @@ mongod --dbpath=data --bind_ip 127.0.0.1
 - Defines and enforces an structure over documents, they don't have any structure in mongo
 - the schema defines the fields of the document
 - schemas can be nested
+# Basic authentication
+- HTTP basic, user & passwd
+- the user and passwd gets sent in the headers
 
 
 
