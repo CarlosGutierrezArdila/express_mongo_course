@@ -70,6 +70,8 @@ mongod --dbpath=data --bind_ip 127.0.0.1
 # Cookies and express sessions
 - cookie parser is already included by express generator, we supply a string key
 - the cookie is sent by the server and stored by the client, no need to authenticate in every request
+- **Express sessions:**
+    - 
 
 
 
