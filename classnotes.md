@@ -71,7 +71,14 @@ mongod --dbpath=data --bind_ip 127.0.0.1
 - cookie parser is already included by express generator, we supply a string key
 - the cookie is sent by the server and stored by the client, no need to authenticate in every request
 - **Express sessions:**
-    - 
+    - manages the sessions for the user and cookies
+# Passport
+- nodejs middleware to implement auhtentication 
+- different strategies (local, OpenID, Oauth)
+- npm install passport --save, passport-local //implements local auth, passport-local-mongoose (plugin to simplyfy use when using mongoose), encripted data with hash etc.
+
+
+
 
 
 
