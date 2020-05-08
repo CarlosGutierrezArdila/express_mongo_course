@@ -76,6 +76,21 @@ mongod --dbpath=data --bind_ip 127.0.0.1
 - nodejs middleware to implement auhtentication 
 - different strategies (local, OpenID, Oauth)
 - npm install passport --save, passport-local //implements local auth, passport-local-mongoose (plugin to simplyfy use when using mongoose), encripted data with hash etc.
+# Token based authentication
+- Session authentication is a problem with stateless servers and scalability
+- Mobile apps have problems with cookies
+- process: 
+    - User requests access with usr and pass
+    - server validates
+    - server creates signed token and sends it to client (nothing stored in server)
+    - All requests should include the token
+    - Server verifies token and answers
+- **JSON web token:**: standards RFC 7519, self contained, shareable between apps
+    - 3 parts: header, payload and signature
+    - npm install jsonwebtoken --save
+        - sign() verifiy()
+    - npm install passport-jwt: using json web token in passport auth
+     
 
 
 
