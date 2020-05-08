@@ -90,6 +90,10 @@ mongod --dbpath=data --bind_ip 127.0.0.1
     - npm install jsonwebtoken --save
         - sign() verifiy()
     - npm install passport-jwt: using json web token in passport auth
+# Mongoose population
+- helps to stablish relations between documents
+- ObjetcId is stored in the parent document then mongoose population replace OId with documents
+- model.find({}).populate('field')
      
 
 
