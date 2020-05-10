@@ -96,6 +96,22 @@ mongod --dbpath=data --bind_ip 127.0.0.1
 - model.find({}).populate('field')
 # HTTPS and Secure communication
 - SSL (secure sockets layer) / TLS (transport layer security)
+- generating openssl key and self signed certificate
+```shell
+openssl genrsa 1024 > private.key
+openssl req -new -key private.key -out cert.csr
+openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
+```
+# Uploading files
+- multipart/form data
+- **Multer:** node middleware to handle multipart/data, parses the form data and adds body object and file object to the request
+# Cross-Origin Resource Sharing
+- Same-Origin Policy: security model restricts a document or script frome one origin can interact with a resource grom another origin
+- origin (protocol, host, port)
+- Cross-origin request: accesing a resource from different prot, host or port
+- CORS: inform the browser that the resources are safe
+- CORS node module: enable cors for specific routes with diffrent configurations. 
+
 
      
 
