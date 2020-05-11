@@ -111,6 +111,16 @@ openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 - Cross-origin request: accesing a resource from different prot, host or port
 - CORS: inform the browser that the resources are safe
 - CORS node module: enable cors for specific routes with diffrent configurations. 
+# OAuth and User Authentication
+- Authorization framework to login in third party webs/apps
+- **OAuth 2 roles:**
+    - resource owner: the user, authorizes a client app to access their account
+    - client application: ants to access to the resource server to obtain information about the user
+    - resource server: server hosting the protected data (profile of the user)
+    - authorization server: issues an access token to the client application, to request the data from resource server.
+- **OAuth Tokens:** limited lifetime, need to keep confidential, Scope -> limit the rights of access token.
+-  **Client App Registration:** client app id, client secret, redirect URL
+- **Passport-facebook-token module:** initializes a passport strategy to use OAuth 2 using facebook
 
 
      
