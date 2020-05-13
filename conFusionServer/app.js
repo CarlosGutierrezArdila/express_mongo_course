@@ -16,7 +16,7 @@ const dishRouter = require('./routes/dishRouter');
 const leaderRouter = require('./routes/leaderRouter');
 const promotionRouter = require('./routes/promotionRouter');
 const uploadRouter = require('./routes/uploadRouter');
-const favoriteRouter = require('./routes/favoriteRoter')
+const favoriteRouter = require('./routes/favoriteRouter')
 
 const Dishes = require('./models/dishes')
 
