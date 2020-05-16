@@ -121,6 +121,11 @@ openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 - **OAuth Tokens:** limited lifetime, need to keep confidential, Scope -> limit the rights of access token.
 -  **Client App Registration:** client app id, client secret, redirect URL
 - **Passport-facebook-token module:** initializes a passport strategy to use OAuth 2 using facebook
+# Backend as a Service
+- Storage and APIs exposed from the cloud
+- Provides an SDK
+- storage, rest and other features
+
 
 
      

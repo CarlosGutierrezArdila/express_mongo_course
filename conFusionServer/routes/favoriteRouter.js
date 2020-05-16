@@ -105,8 +105,9 @@ favoriteRouter.route('/:dishId')
                      "favorites": favorite})
             }
         },(err) => next(err))
+        .catch((err) => next(err))
     })
-    .catch((err) => next(err))
+    
 
     .post(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
         const dishes = [req.params.dishId]
