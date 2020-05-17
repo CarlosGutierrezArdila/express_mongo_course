@@ -125,6 +125,13 @@ openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 - Storage and APIs exposed from the cloud
 - Provides an SDK
 - storage, rest and other features
+# Firebase
+- Authentication with email and other oauth providers
+- Storage: upload files and define rules
+- Database: Realtime database and Cloud firestore
+    - Cloud firestore allows to add collections and documents
+- Firebase node module
+
 
 
 
